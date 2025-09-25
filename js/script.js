@@ -68,7 +68,6 @@
          
          allCharacters = allData;
          
-         // Llenar opciones de filtros de manera dinámica
          populateFilterOptions();
          
      } catch (error) {
@@ -82,7 +81,6 @@
          .filter(species => species)
          .sort();
      
-     // Limpiar opciones existentes (excepto la primera)
      speciesFilter.innerHTML = '<option value="">Especie</option>';
      uniqueSpecies.forEach(species => {
          const option = document.createElement('option');
@@ -145,7 +143,6 @@
          createCharacterCard(character)
      ).join('');
      
-     // Agregar animación 
      const cards = document.querySelectorAll('.character-card');
      cards.forEach((card, index) => {
          card.style.animation = `slideInUp 0.5s ease forwards`;
@@ -187,7 +184,6 @@
          renderCharacters();
          updatePaginationButtons();
          
-         // Scroll suave hacia arriba
          document.querySelector('.characters-grid').scrollIntoView({
              behavior: 'smooth',
              block: 'start'
@@ -202,7 +198,6 @@
      prevButton.disabled = currentPage === 1;
      nextButton.disabled = currentPage === totalPages || totalPages === 0;
      
-     // Agregar clases para estilos disabled
      prevButton.classList.toggle('disabled', currentPage === 1);
      nextButton.classList.toggle('disabled', currentPage === totalPages || totalPages === 0);
  }
@@ -236,7 +231,6 @@
      `;
  }
 
- // Función para búsqueda en tiempo real más eficiente
  function debounce(func, wait) {
      let timeout;
      return function executedFunction(...args) {
