@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty Characters</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-portal"></div>
+    <div class="background-pattern"></div>
+    
+    <main class="main">
+        <header class="header">
+            <div class="logo-container">
+                <img src="./resources/img/Rick-and-Morty-Horror-Font-1-removebg-preview.png" alt="Rick and Morty Logo" class="logo">
+            </div>
+        </header>
+        
+        <section class="filters">
+            <div class="filter-container">
+                <input type="text" placeholder="Buscar por nombre" class="filter-input" id="nameFilter">
+                <select class="filter-select" id="genderFilter">
+                    <option value="">Género</option>
+                    <option value="Male">Masculino</option>
+                    <option value="Female">Femenino</option>
+                    <option value="Genderless">Sin género</option>
+                    <option value="unknown">Desconocido</option>
+                </select>
+                <select class="filter-select" id="speciesFilter">
+                    <option value="">Especie</option>
+                    <!-- Las opciones se llenan dinámicamente con JavaScript -->
+                </select>
+                <select class="filter-select" id="statusFilter">
+                    <option value="">Estado</option>
+                    <option value="Alive">Vivo</option>
+                    <option value="Dead">Muerto</option>
+                    <option value="unknown">Desconocido</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="characters-grid">
+            <!-- Los personajes se cargan dinámicamente con JavaScript -->
+        </section>
+
+        <section class="pagination">
+            <button class="pagination__button pagination__button--prev">← Anterior</button>
+            <button class="pagination__button pagination__button--next">Siguiente →</button>
+        </section>
+    </main>
+
+    <div class="portal-morty">
+        <img src="./resources/img/morty saliendo del portal.png" alt="Morty Portal" class="portal-morty__image">
+        <img src="./resources/img/portal sin fondo.png" alt="Portal" class="portal-morty__portal">
+    </div>
+
+    <script src="./js/script.js"></script>
+
+</body>
+</html>
