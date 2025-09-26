@@ -61,6 +61,7 @@ body::before {
 }
 
 .logo-container {
+    margin-top: 100px;
     display: inline-block;
     filter: drop-shadow(0 0 25px rgba(0, 255, 127, 0.8));
     width: 100%;
@@ -73,6 +74,7 @@ body::before {
     height: auto;
     max-width: none;
     object-fit: contain;
+    margin-top: -80px;
     animation: logoGlow 3s ease-in-out infinite alternate;
     transition: transform 0.3s ease;
 }
@@ -90,18 +92,17 @@ body::before {
     }
 }
 
-/* Main container */
 .main {
-    max-width: 1200px;
-    margin: 2rem auto;
+    max-width: 1580px;
+    margin: 5rem auto;
     padding: 2rem;
     position: relative;
     z-index: 10;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.596);
     border-radius: 20px;
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(0, 255, 127, 0.3);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(1px);
+    border: 1px solid rgba(238, 240, 239, 0.993);
+    /*box-shadow: 0 8px 32px rgb(221, 221, 221);*/
 }
 
 /* Filtros */
@@ -148,7 +149,7 @@ body::before {
 /* Grid de personajes */
 .characters-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     margin-bottom: 3rem;
 }
@@ -290,18 +291,19 @@ body::before {
 }
 
 /* Portal y Morty decorativo */
-.portal-morty {
+/*.portal-morty {
     position: fixed;
     right: -100px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
     pointer-events: none;
-}
+}*/
 
 .portal-morty__portal {
     position: absolute;
-    top: 0;
+    z-index: -2;
+    top: 77.5%;
     left: 0;
     width: 300px;
     height: 300px;
@@ -310,9 +312,11 @@ body::before {
 }
 
 .portal-morty__image {
-    position: relative;
-    z-index: 2;
-    width: 200px;
+    position: absolute;
+    z-index: -2;
+    top: 0%;
+    left: 81.5%;
+    width: 300px;
     height: auto;
     animation: mortyFloat 3s ease-in-out infinite alternate;
 }
