@@ -344,6 +344,7 @@ body::before {
     .main {
         padding: 1.5rem;
         margin: 1rem;
+        margin-top: 10%;
         border-radius: 15px;
     }
     
